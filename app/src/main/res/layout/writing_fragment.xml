@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/champange">
+
+
+
+        <EditText
+            android:id="@+id/rhymeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:hint="@string/find_a_rhyme"
+            android:maxLines="1"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/rhyme_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/rhyme_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_search"
+            android:background="@drawable/rounded_button"
+            app:layout_constraintBottom_toTopOf="@+id/editText"
+            app:layout_constraintLeft_toRightOf="@+id/rhymeText"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+        <com.kugemi.poemwriter.views.custom_views.CustomEditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:maxLines="1000"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:paddingStart="16dp"
+            android:paddingEnd="60dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rhymeText"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

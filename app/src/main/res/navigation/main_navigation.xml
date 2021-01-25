@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_navigation"
+    app:startDestination="@+id/savedPoemsFragment">
+
+    <fragment
+        android:id="@+id/writeFragment"
+        android:name="com.kugemi.poemwriter.views.WriteFragment"
+        android:label="WriteFragment" >
+        <argument
+            android:name="poem"
+            app:argType="com.kugemi.poemwriter.viewmodels.PoemViewModel"/>
+        <action
+            android:id="@+id/action_writeFragment_to_rhymeFragment"
+            app:destination="@id/rhymeFragment">
+            <argument
+                android:name="word"
+                app:argType="com.kugemi.poemwriter.model.local_dto.RhymeWord"/>
+        </action>
+        <action
+            android:id="@+id/action_writeFragment_to_savedPoemsFragment"
+            app:destination="@id/savedPoemsFragment" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/rhymeFragment"
+        android:name="com.kugemi.poemwriter.views.RhymeFragment"
+        android:label="RhymeFragment" >
+        <argument
+            android:name="word"
+            app:argType="com.kugemi.poemwriter.model.local_dto.RhymeWord"/>
+    </fragment>
+    <fragment
+        android:id="@+id/savedPoemsFragment"
+        android:name="com.kugemi.poemwriter.views.SavedPoemsFragment"
+        android:label="SavedPoemsFragment" >
+        <action
+            android:id="@+id/action_savedPoemsFragment_to_writeFragment"
+            app:destination="@id/writeFragment">
+            <argument
+                android:name="poem"
+                app:argType="com.kugemi.poemwriter.viewmodels.PoemViewModel"/>
+        </action>
+
+    </fragment>
+</navigation>

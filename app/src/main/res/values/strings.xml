@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PoemWriter</string>
+    <string name="enter_your_text">Enter your text</string>
+    <string name="word">Word</string>
+    <string name="find">find</string>
+    <string name="create_new_poem">Create new poem</string>
+    <string name="add_new_poem">Add new poem</string>
+    <string name="save">Save</string>
+    <string name="find_a_rhyme">Find a rhyme</string>
+    <string name="syllables">Syllables</string>
+    <string name="_4_5_4">4-5-4</string>
+    <string name="language">Language</string>
+</resources>
